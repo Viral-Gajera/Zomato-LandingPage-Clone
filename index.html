@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <!-- ZOMATO LOGO IN TITIE -->
+        <link
+            rel="icon"
+            type="image/x-icon"
+            href="https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/Zomato_logo.png/220px-Zomato_logo.png" />
+        <!-- FONT AWESOME CDN -->
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+            integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer" />
+        <!-- GOOGLE FONTS -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+            rel="stylesheet" />
+
+        <!-- TAILWIND CDN -->
+        <script src="https://cdn.tailwindcss.com"></script>
+
+        <!-- CUSTOMIZATION -->
+        <script>
+            tailwind.config = {
+                theme: {
+                    extend: {
+                        backgroundImage: {
+                            hero: "url('./images/heroSectionBackground.png')",
+                        },
+                    },
+                },
+            };
+        </script>
+
+        <!-- CUSTOM CSS -->
+        <style type="text/tailwindcss"></style>
+
+        <title>Zomato Clone</title>
+    </head>
+    <body class="font-['Poppins']">
+        <!-- HERO SECTION -->
+        <section
+            class="min-h-[60vh] bg-[url('./images/heroSectionBackground.png')] bg-cover bg-center pt-1">
+            <!-- NAVIGATION BAR -->
+            <section
+                class="hidden md:flex justify-between text-white absolute top-0 left-[50%] -translate-x-[50%] w-11/12 mx-auto mt-5">
+                <div>
+                    <a href="#">Get the App</a>
+                </div>
+                <div class="flex gap-6">
+                    <a href="#" class="hover:font-bold">Investor Relation</a>
+                    <a href="#" class="hover:font-bold">Add restaurant</a>
+                    <a href="#" class="hover:font-bold">Login</a>
+                    <a href="#" class="hover:font-bold">Sign up</a>
+                </div>
+            </section>
+
+            <!-- NAVIGATION BAR FOR SMALL DEVICE -->
+            <section
+                class="flex md:hidden absolute top-0 left-[50%] -translate-x-[50%] items-center justify-between text-white w-11/12 mx-auto my-2">
+                <div class="custon-menu-icon">
+                    <img src="./images/menu.png" class="w-8" alt="" />
+                </div>
+                <div></div>
+            </section>
+
+            <!-- NAVIGATION LIST FOR SMALL DEVICES -->
+            <section
+                class="absolute top-0 left-0 hidden w-full min-h-full bg-white custon-menu-section">
+                <!-- CROSS ICON AND ZOMATO ICON -->
+                <div
+                    class="flex items-center justify-between w-11/12 mx-auto my-2">
+                    <div class="custon-menu-section">
+                        <img src="./images/cross.png" class="w-8" alt="" />
+                    </div>
+                    <div>
+                        <img src="./images/logo.png" class="w-28" alt="" />
+                    </div>
+                </div>
+
+                <!-- NAVIGATION LINKS -->
+                <div
+                    class="flex flex-col w-11/12 gap-4 pl-8 mx-auto mt-10 font-light">
+                    <a href="#" class="hover:font-bold">Investor Relation</a>
+                    <a href="#" class="hover:font-bold">Add restaurant</a>
+                    <a href="#" class="hover:font-bold">Login</a>
+                    <a href="#" class="hover:font-bold">Sign up</a>
+                </div>
+            </section>
+
+            <!-- MAIN SECTION -->
+            <section
+                class="flex flex-col items-center justify-center min-h-[58vh] text-white">
+                <!-- ZOMATO ICON -->
+                <div>
+                    <img
+                        class="w-40 sm:w-52 md:w-64"
+                        src="./images/heroSectionLogo.png"
+                        alt="" />
+                </div>
+
+                <!-- CENTRAL TEXT -->
+                <div class="w-11/12 mt-5 text-xl text-center">
+                    Discover the best food & drinks in Ahmedabad
+                </div>
+
+                <!-- SEARCH -->
+                <div class="flex flex-col items-center justify-center w-11/12 p-1 mt-10 font-light rounded md:bg-white md:mt-5 md:flex-row lg:w-8/12 xl:w-6/12">
+
+                    <div class="flex items-center w-full p-1 mb-2 md:mb-0 md:max-w-[220px] overflow-hidden bg-white rounded">
+                        <img src="./images/location.png " class="w-8 " alt="" />
+                        <input
+                            type="text"
+                            class="ml-2 text-black outline-none peer grow md:max-w-[150px]"
+                            name=""
+                            placeholder="Ahmedabad"
+                            id="" />
+                        <img src="./images/down.png" class="w-5 h-5 peer-focus:rotate-180" alt="" />
+
+                    </div>
+                    <div class="hidden mx-2 border-l-2 h-7 md:block " ></div>
+                    <div class="flex w-full p-1 bg-white rounded" >
+                        <img
+                                src="./images/search.png"
+                                class="w-8"
+                                alt="" />
+
+                                <input
+                                type="text"
+                                class="ml-2 text-black outline-none w-80"
+                                name=""
+                                placeholder="Search for restaurant, cuisine or a dish"
+                                id="" />
+                    </div>
+                </div>
+
+                
+
+            </section>
+        </section>
+
+        <!-- CARDS -->
+        <section class="p-1 m-1 mt-5">
+            <section class="w-full p-1 mx-auto lg:w-8/12 md:w-10/12">
+                <div class="flex justify-center gap-3">
+                    <div
+                        class="w-full overflow-hidden transition-all duration-200 border cursor-pointer rounded-xl hover:scale-105">
+                        <div
+                            class="bg-[url('./images/item1.png')] h-40 bg-no-repeat bg-cover bg-center">
+                            <!-- <img src="" class="h-[100px]" alt=""> -->
+                        </div>
+                        <div class="pl-5 mx-1 my-2 text-base">
+                            <h1 class="my-1">Order online</h1>
+                            <p class="font-light">
+                                Stay home and order to your doorstep
+                            </p>
+                        </div>
+                    </div>
+                    <div
+                        class="w-full overflow-hidden transition-all duration-200 border cursor-pointer hover:scale-105 rounded-xl">
+                        <div
+                            class="bg-[url('./images/item2.png')] h-40 bg-no-repeat bg-cover bg-center">
+                            <!-- <img src="" class="h-[100px]" alt=""> -->
+                        </div>
+                        <div class="pl-5 mx-1 my-2 text-base">
+                            <h1 class="my-1">Dining</h1>
+                            <p class="font-light">
+                                View the city's favourite dining venues
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </section>
+
+        <!-- COLLECTIONS -->
+        <section class="p-1 m-1 mt-10">
+            <section class="w-full p-1 mx-auto lg:w-8/12 md:w-10/12">
+                <div class="p-1 m-1">
+                    <div class="text-xl">Collection</div>
+                    <div class="flex justify-between font-light">
+                        <div>
+                            Explore curated list of top restaurants, cafes,
+                            pubs, and bars in Ahmedabad, based on trends
+                        </div>
+                        <div>
+                            <span class="text-[#E53546]"
+                                >All collections in Ahmedabad&nbsp;>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div
+                    class="flex flex-wrap items-center justify-center gap-2 m-1 mt-5">
+                    <div
+                        class="max-w-[280px] min-w-[230px] grow transition-all hover:scale-105">
+                        <div
+                            class="bg-[url('./images/collection1.jpg')] text-white h-96 m-1 rounded-lg bg-cover bg-center relative overflow-hidden">
+                            <div
+                                class="absolute z-10 w-full h-full bg-gradient-to-b from-[rgba(255,255,255,0.1)] to-black"></div>
+                            <div class="absolute z-20 bottom-2 left-2">
+                                <div>Great Bufffets</div>
+                                <div>7 Places ></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        class="max-w-[280px] min-w-[230px] grow transition-all hover:scale-105">
+                        <div
+                            class="bg-[url('./images/collection2.jpg')] text-white h-96 m-1 rounded-lg bg-cover bg-center relative overflow-hidden">
+                            <div
+                                class="absolute z-10 w-full h-full bg-gradient-to-b from-[rgba(255,255,255,0.1)] to-black"></div>
+                            <div class="absolute z-20 bottom-2 left-2">
+                                <div>Great Bufffets</div>
+                                <div>7 Places ></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        class="max-w-[280px] min-w-[230px] grow transition-all hover:scale-105">
+                        <div
+                            class="bg-[url('./images/collection3.jpg')] text-white h-96 m-1 rounded-lg bg-cover bg-center relative overflow-hidden">
+                            <div
+                                class="absolute z-10 w-full h-full bg-gradient-to-b from-[rgba(255,255,255,0.1)] to-black"></div>
+                            <div class="absolute z-20 bottom-2 left-2">
+                                <div>Great Bufffets</div>
+                                <div>7 Places ></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        class="max-w-[280px] min-w-[230px] grow transition-all hover:scale-105">
+                        <div
+                            class="bg-[url('./images/collection4.jpg')] text-white h-96 m-1 rounded-lg bg-cover bg-center relative overflow-hidden">
+                            <div
+                                class="absolute z-10 w-full h-full bg-gradient-to-b from-[rgba(255,255,255,0.1)] to-black"></div>
+                            <div class="absolute z-20 bottom-2 left-2">
+                                <div>Great Bufffets</div>
+                                <div>7 Places ></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </section>
+
+        <!-- POPULAR LOCATION -->
+        <section class="p-1 pb-16 m-1 mt-16 ">
+            <section class="w-full p-1 mx-auto lg:w-8/12 md:w-10/12">
+                <div class="text-2xl">
+                    Popular localities in and around Ahmedabad
+                </div>
+                <div class="grid grid-cols-3 gap-2 mt-5">
+                    <div
+                        class="flex items-center justify-between px-5 py-5 border rounded shadow">
+                        <div>
+                            <div class="text-xl font-light">Bodakdev</div>
+                            <div class="mt-1 text-xs font-light">
+                                341 places
+                            </div>
+                        </div>
+                        <div>></div>
+                    </div>
+                    <div
+                        class="flex items-center justify-between px-5 py-5 border rounded shadow">
+                        <div>
+                            <div class="text-xl font-light">Bodakdev</div>
+                            <div class="mt-1 text-xs font-light">
+                                341 places
+                            </div>
+                        </div>
+                        <div>></div>
+                    </div>
+                    <div
+                        class="flex items-center justify-between px-5 py-5 border rounded shadow">
+                        <div>
+                            <div class="text-xl font-light">Bodakdev</div>
+                            <div class="mt-1 text-xs font-light">
+                                341 places
+                            </div>
+                        </div>
+                        <div>></div>
+                    </div>
+                    <div
+                        class="flex items-center justify-between px-5 py-5 border rounded shadow">
+                        <div>
+                            <div class="text-xl font-light">Bodakdev</div>
+                            <div class="mt-1 text-xs font-light">
+                                341 places
+                            </div>
+                        </div>
+                        <div>></div>
+                    </div>
+                    <div
+                        class="flex items-center justify-between px-5 py-5 border rounded shadow">
+                        <div>
+                            <div class="text-xl font-light">Bodakdev</div>
+                            <div class="mt-1 text-xs font-light">
+                                341 places
+                            </div>
+                        </div>
+                        <div>></div>
+                    </div>
+                    <div
+                        class="flex items-center justify-between px-5 py-5 border rounded shadow">
+                        <div>
+                            <div class="text-xl font-light">Bodakdev</div>
+                            <div class="mt-1 text-xs font-light">
+                                341 places
+                            </div>
+                        </div>
+                        <div>></div>
+                    </div>
+                    <div
+                        class="flex items-center justify-between px-5 py-5 border rounded shadow">
+                        <div>
+                            <div class="text-xl font-light">Bodakdev</div>
+                            <div class="mt-1 text-xs font-light">
+                                341 places
+                            </div>
+                        </div>
+                        <div>></div>
+                    </div>
+                    <div
+                        class="flex items-center justify-between px-5 py-5 border rounded shadow">
+                        <div>
+                            <div class="text-xl font-light">Bodakdev</div>
+                            <div class="mt-1 text-xs font-light">
+                                341 places
+                            </div>
+                        </div>
+                        <div>></div>
+                    </div>
+                    <div
+                        class="flex items-center justify-center px-5 py-5 border rounded shadow">
+                        <span>See More</span>
+                    </div>
+                </div>
+            </section>
+        </section>
+
+        <!-- ZOMATO APP -->
+        <section class="bg-[#FFFBF7] py-10 flex">
+            <div class="w-[50%] hidden sm:flex justify-end" >
+                <img src="./images/mobileBanner.png" class=" md:max-w-[500px]" alt="">
+            </div>
+            <div class="w-[100%] sm:w-[50%] flex flex-col gap-2 items-center sm:items-start justify-center" >
+                <div class="text-3xl" >Get The Zomato app</div>
+                <div class="my-5" >We will send you a link, open it on your phone to download the app</div>
+                <div class="flex items-center gap-2" >
+                    <input type="radio" name="sendLink" id="email" class="bg-[#EF4F5F]" >
+                    <label for="email">Email</label>
+                    <input type="radio" name="sendLink" id="Phone">
+                    <label for="Phone">Phone</label>
+                </div>
+                <div>
+                    <input type="text" class="p-2 border-2 border-gray-300 rounded outline-none h-[42px]" placeholder="Email Or Phone" >
+                    <button class="bg-[#EF4F5F] p-2 rounded text-white h-[40px]" >Share</button>
+                </div>
+                <div class="mt-5" >Download app from</div>
+                <div class="flex gap-2" >
+                    <img src="./images/playStore.png" class="w-[150px]" alt="">
+                    <img src="./images/appleStore.png" class="w-[150px]" alt="">
+                </div>
+            </div>
+        </section>
+
+        <!-- OPTION NEAR ME -->
+        <section class="my-20" >
+            <div class="w-full mx-auto lg:w-8/12 md:w-10/12" >
+                <div class="pl-2 mb-5 text-2xl">Explore options near me</div>
+                <div class="flex items-center justify-between px-5 py-3 mx-5 my-2 border rounded" >
+                    <div class="text-xl font-light" >Popular cuisines near me</div>
+                    <div> <img class="w-4" src="./images/down.png"></div>
+                </div>
+                <div class="flex items-center justify-between px-5 py-3 mx-5 my-2 border rounded" >
+                    <div class="text-xl font-light" >Popular cuisines near me</div>
+                    <div> <img class="w-4" src="./images/down.png"></div>
+                </div>
+                <div class="flex items-center justify-between px-5 py-3 mx-5 my-2 border rounded" >
+                    <div class="text-xl font-light" >Popular cuisines near me</div>
+                    <div> <img class="w-4" src="./images/down.png"></div>
+                </div>
+                <div class="flex items-center justify-between px-5 py-3 mx-5 my-2 border rounded" >
+                    <div class="text-xl font-light" >Popular cuisines near me</div>
+                    <div> <img class="w-4" src="./images/down.png"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FOOTER -->
+        <section class="p-1 bg-[#FFFBF7] py-10 font-light" >
+            <div class="w-full p-1 mx-auto my-2 lg:w-8/12 md:w-10/12" >
+                <div class="flex flex-wrap items-center justify-between " >
+                    <div class="p-1 ">
+                        <img class="invert w-44" src="./images/heroSectionLogo.png" alt="">
+                    </div>
+                    <div class="flex gap-2" > 
+                        <div class="flex items-center gap-2 px-4 py-2 border-2 rounded" >
+                            <span></span>
+                            <span>India</span>
+                            <span><img class="w-4" src="./images/down.png" alt=""></span>
+                        </div>
+                        <div class="flex items-center gap-2 px-4 py-1 border-2 rounded" >
+                            <span></span>
+                            <span>English</span>
+                            <span><img class="w-4" src="./images/down.png" alt=""></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex flex-wrap justify-between my-2 tracking-widest " >
+
+                    <div class="flex flex-col gap-1 p-1 m-2 text-sm " >
+                        <span class="mb-2 font-semibold" >ABOUT ZOMATO</span>
+                        <span>Who We Are</span>
+                        <span>Blog</span>
+                        <span>Work With Us</span>
+                        <span>Investor Relations</span>
+                        <span>Report Fraud</span>
+                        <span>Contact Us</span>
+                    </div>
+                    
+                    <div class="flex flex-col gap-1 p-1 m-2 text-sm " >
+                        <span class="mb-2 font-semibold" >ZOMAVERSE</span>
+                        <span>Zomato</span>
+                        <span>Blinkit</span>
+                        <span>Feeding India</span>
+                        <span>Hyperpure</span>
+                        <span>Zomaland</span>
+                    </div>
+
+                    <div class="flex flex-col gap-1 p-1 m-2 text-sm " >
+                        <span class="mb-2 font-semibold" >FOR RESTAURANTS</span>
+                        <span>Partner With Us</span>
+                        <span>Apps For You</span>
+                    </div>
+                    <div class="flex flex-col gap-1 p-1 m-2 text-sm " >
+                        <span class="mb-2 font-semibold" >FOR ENTERPRISES</span>
+                        <span>Zomato For Work</span>
+                    </div>
+                    <div class="flex flex-col gap-1 p-1 m-2 text-sm " >
+                        <span class="mb-2 font-semibold" >LEARN MORE</span>
+                        <span>Privacy</span>
+                        <span>Security</span>
+                        <span>Terms</span>
+                        <span>Sitemap</span>
+                    </div>
+
+                </div>
+                <div class="flex flex-col items-center justify-center my-2 " >
+                    <div class="my-2 text-xl" >Get App</div>
+                    <div class="flex gap-2" >
+                        <img src="./images/playStore.png" class="w-[150px]" alt="">
+                        <img src="./images/appleStore.png" class="w-[150px]" alt="">
+                    </div>
+                </div>
+                <div class="pt-5 mt-10 text-xs text-gray-500 border-t-2" >
+                    By continuing past this page, you agree to our Terms of Service, Cookie Policy, Privacy Policy and Content Policies. All trademarks are properties of their respective owners. 2008-2022 © Zomato™ Ltd. All rights reserved.
+                </div>
+            </div>
+        </section>
+
+        <script>
+            let menuIcon = document.querySelector(".custon-menu-icon");
+            let menuSection = document.querySelector(".custon-menu-section");
+            let crossIcon = document.querySelector(".custon-menu-section");
+
+            menuIcon.addEventListener("click", function () {
+                menuSection.classList.remove("hidden");
+            });
+
+            crossIcon.addEventListener("click", function () {
+                menuSection.classList.add("hidden");
+            });
+        </script>
+    </body>
+</html>
